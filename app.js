@@ -1,14 +1,15 @@
 const express = require("express");
+const routes = require('./routes/m_router');
 const app = express();
 
 app.use(express.static('./public'));
 app.set("view engine", "ejs");
+app.use('/', routes)
 
 
 
 
-
-app.get('/', (req,res) =>{
+app.get('/testing', (req,res) =>{
     res.send('<h1>Home page</h1>')
 });
 
