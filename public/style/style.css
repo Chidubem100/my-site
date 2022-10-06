@@ -1,3 +1,27 @@
-body{
-    background-color: grey;
+*{
+    padding: 0;
+    margin: 0;
 }
+
+:root {
+    --purple_d: #9926f0;
+    --purple_l: #bb6ef5;
+
+    /* main */
+  --primary-500: #645cff;
+  --primary-600: #554ed9;
+  --primary-700: #4640b3;
+  --primary-800: #37338c;
+  --primary-900: #282566;
+  --primary-1000: #191740;
+  --primary-1100: #0a0919;
+}
+
+li{
+    padding: 0.07rem;
+
+}
+a{
+    font-weight: 600;
+
+ }
