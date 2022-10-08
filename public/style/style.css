@@ -104,3 +104,26 @@
 .logo-box > img:hover{
     filter: grayscale(120);
 }
+
+.border-right{
+    border-right: 0.1rem solid #2d288f;
+    height: 100%;
+}
+.services{
+    position: relative;
+    padding: 1rem 0;
+}
+.services > content{
+     padding: 1rem;
+     margin-top: 1.5rem;
+}
+.icon{
+    font-size: 4rem;
+    color: var(--primary-1000);
+}
+.title{
+    font-weight: 700;
+    color: #2d288f;
+    text-transform: capitalize;
+    display: inline-block;
+}
