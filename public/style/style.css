@@ -111,11 +111,10 @@
 }
 .services{
     position: relative;
-    padding: 1rem 0;
 }
 .services > content{
      padding: 1rem;
-     margin-top: 1.5rem;
+     margin-top: 5rem;
 }
 .icon{
     font-size: 4rem;
@@ -126,4 +125,36 @@
     color: #2d288f;
     text-transform: capitalize;
     display: inline-block;
+}
+
+
+/* for project css */
+.project{
+    position: relative;
+    padding: 0;
+}
+.c-img > img{
+    height: 25rem;
+    width: 100%;
+    /* position: absolute; */
+    left: 50%;
+    transform: translate(-50% -50%);
+}
+.c-descrip >a{
+    text-decoration: none;
+    color: var(--primary-1000);
+    font-size: 1.3rem;
+    margin: 2px 5px;
+    padding: 5px;
+}
+
+
+/* for contact page */
+.contact{
+    margin-top: 4rem;
+    padding: 4rem 0;
+    background-color: rgb(233, 227, 227);
+}
+.c-grad{
+   background-color: var(--primary-1000);
 }
