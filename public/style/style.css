@@ -248,3 +248,14 @@
     margin-left: 0.7rem;
     margin-top: 1.5rem;
 }
+
+
+/* for about */
+.a-title{
+    margin-top: 5rem;
+}
+.a-para{
+    padding: 7px;
+    font-size: 1.4rem;
+    
+}
