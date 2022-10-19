@@ -1,20 +1,17 @@
 const express = require('express');
+const {
+    homePage,
+    contactPage,
+    aboutPage,
+    contact
+} = require('../controller/m_controller');
 
 const router = express.Router();
 
-router.get('/', (req,res) =>{
-   res.render("home") 
-});
-
-router.get('/about', (req,res) =>{
-    res.render('about')
-});
-
-
-router.get('/contact', (req,res) =>{
-    res.render("contact")
-});
-
+router.get('/', homePage);
+router.get('/about', aboutPage);
+router.get('/contact', contactPage)
+router.post('/contact', contact)
 
 
 
