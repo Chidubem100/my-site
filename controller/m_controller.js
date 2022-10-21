@@ -4,7 +4,7 @@ const homePage = (req,res) =>{
     try {
         return res.status(200).render("home")
     } catch (error) {
-        res.status(500).send('<h2>Something went wrong, Please try again.</h2>')   
+        return res.status(500).send('<h2>Something went wrong, Please try again.</h2>')   
     }
 }
 
@@ -28,18 +28,18 @@ const contact =  (req,res) =>{
     console.log(req.body)
     try {
         const transporter =  nodemailer.createTransport({
-            host: "smtp.google.com",
+            host: process.env.HOST,
             secure: true,
             port: 587,
             auth:{
-                user: '',
-                pass: ''
+                user: process.env.SMTP_EMAIL,
+                pass: process.env.SMTP_PASS
             },
         });
 
         const mailOptions = {
             from: req.body.email,
-            to: "",
+            to: process.env.SMTP_EMAIL,
             text: req.body.message
         }
 
