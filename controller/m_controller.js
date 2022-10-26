@@ -39,7 +39,7 @@ const contact =  (req,res) =>{
 
         const mailOptions = {
             from: req.body.email,
-            to: process.env.SMTP_EMAIL,
+            to: "dubyernest14@gmail.com",
             text: req.body.message
         }
 
