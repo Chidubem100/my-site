@@ -1,3 +1,5 @@
+// alert('hello world')
+
 const contactForm = document.querySelector('#c-form');
 let firstName = document.getElementById('firstname');
 let email = document.getElementById('email');
@@ -14,21 +16,33 @@ contactForm.addEventListener('submit', (e) =>{
         email: email.value,
         message: message.value
     }
-    // console.log(formData);
+    console.log(formData);
 
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '/contact');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.onload = function(){
-        
-        if(xhr.responseText === 'success'){
-            firstName.value = '';
-            lastName.value = '';
-            email.value = '';
-            message.value = '';
-        }else{
-            alert("Something went wrong, please try again..")
+        try {
+            if(xhr.responseText === 'success'){
+                firstName.value = '';
+                lastName.value = '';
+                email.value = '';
+                message.value = '';
+            }else{
+                console.log(error)
+            }
+        } catch (error) {
+            console.log(error)
         }
+        // if(xhr.responseText === 'success'){
+        //     firstName.value = '';
+        //     lastName.value = '';
+        //     email.value = '';
+        //     message.value = '';
+        // }else{
+        //     console.log()
+        //     // alert("Something went wrong, please try again..")
+        // }
     }
     xhr.send(JSON.stringify(formData));
 });
